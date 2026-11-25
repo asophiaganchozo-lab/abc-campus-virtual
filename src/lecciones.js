@@ -1,5 +1,7 @@
 
 export const lecciones = {
+  // MÓDULO 1: DISEÑO ALGORÍTMICO Y RESOLUCIÓN COMPUTACIONAL
+
   "Análisis y descomposición de problemas complejos": {
     objetivo: "Analizar problemas complejos, identificar sus componentes y diseñar soluciones mediante el pensamiento computacional.",
     explicacion: `
@@ -283,6 +285,282 @@ y mantener sistemas informáticos confiables.
       ],
       respuesta: 0,
       explicacion: "La validación permite comprobar que el algoritmo resuelva correctamente el problema."
+    }
+  },
+
+  // MÓDULO 2: PROGRAMACIÓN ESTRUCTURADA Y LENGUAJES DE PROGRAMACIÓN
+
+  "Fundamentos de programación estructurada": {
+    objetivo: "Comprender los principios de la programación estructurada y organizar programas mediante instrucciones claras y ordenadas.",
+    explicacion: `
+La programación estructurada es un paradigma que permite desarrollar
+programas mediante estructuras lógicas organizadas.
+
+Su propósito es facilitar la comprensión, modificación y mantenimiento
+del código.
+
+PRINCIPIOS FUNDAMENTALES
+
+1. Secuencia: las instrucciones se ejecutan en orden.
+2. Selección: permite tomar decisiones mediante condiciones.
+3. Iteración: permite repetir instrucciones.
+
+VENTAJAS
+
+- Código más organizado.
+- Menor repetición innecesaria.
+- Facilidad para encontrar errores.
+- Mayor facilidad de mantenimiento.
+
+EJEMPLO
+
+Un programa que calcula el promedio de un estudiante puede organizarse
+en tres partes: entrada de notas, cálculo del promedio y presentación
+del resultado.
+
+APLICACIÓN
+
+Se utiliza en sistemas administrativos, programas educativos y
+aplicaciones de gestión.
+`,
+    ejemplo: "Un programa estructurado separa la lectura de datos, los cálculos y la presentación de resultados.",
+    video: "https://www.youtube.com/results?search_query=programacion+estructurada+explicacion",
+    actividad: {
+      pregunta: "¿Cuáles son las tres estructuras fundamentales de la programación estructurada?",
+      opciones: [
+        "Texto, imagen y sonido",
+        "Secuencia, selección e iteración",
+        "Entrada, teclado y pantalla",
+        "Variables, archivos y carpetas"
+      ],
+      respuesta: 1,
+      explicacion: "La secuencia, la selección y la iteración permiten organizar el flujo de un programa."
+    }
+  },
+
+  "Variables, constantes y tipos de datos": {
+    objetivo: "Identificar y utilizar variables, constantes y tipos de datos en programas informáticos.",
+    explicacion: `
+Las variables y constantes permiten almacenar información durante
+la ejecución de un programa.
+
+VARIABLES
+
+Son espacios de memoria identificados mediante nombres cuyo valor
+puede cambiar durante la ejecución.
+
+Ejemplo:
+edad = 16
+edad = 17
+
+CONSTANTES
+
+Representan valores que no deben modificarse durante la ejecución
+del programa.
+
+Ejemplo:
+PI = 3.1416
+
+TIPOS DE DATOS
+
+Entero: almacena números sin decimales.
+Real: almacena números con decimales.
+Cadena: almacena texto.
+Booleano: representa verdadero o falso.
+
+EJEMPLO
+
+nombre = "Ana"
+edad = 17
+promedio = 9.25
+aprobado = verdadero
+
+IMPORTANCIA
+
+Elegir correctamente los tipos de datos ayuda a realizar operaciones
+adecuadas y evitar errores.
+`,
+    ejemplo: "La variable promedio puede almacenar 8.75, mientras que una variable nombre puede almacenar el texto 'Carlos'.",
+    video: "https://www.youtube.com/results?search_query=variables+constantes+tipos+de+datos+programacion",
+    actividad: {
+      pregunta: "¿Qué tipo de dato representa verdadero o falso?",
+      opciones: [
+        "Cadena",
+        "Entero",
+        "Booleano",
+        "Real"
+      ],
+      respuesta: 2,
+      explicacion: "El tipo booleano representa dos estados lógicos: verdadero y falso."
+    }
+  },
+
+  "Operadores y expresiones en programación": {
+    objetivo: "Aplicar operadores aritméticos, relacionales y lógicos en la construcción de expresiones.",
+    explicacion: `
+Los operadores son símbolos que permiten realizar operaciones
+sobre datos y variables.
+
+OPERADORES ARITMÉTICOS
+
+Suma (+)
+Resta (-)
+Multiplicación (*)
+División (/)
+Módulo (%)
+
+OPERADORES RELACIONALES
+
+Mayor que (>)
+Menor que (<)
+Igual que (==)
+Diferente (!=)
+Mayor o igual (>=)
+Menor o igual (<=)
+
+OPERADORES LÓGICOS
+
+AND: verdadero cuando ambas condiciones son verdaderas.
+OR: verdadero cuando al menos una condición es verdadera.
+NOT: invierte el valor lógico.
+
+EJEMPLO
+
+edad = 17
+edad >= 18
+
+El resultado de la expresión es falso.
+
+EXPRESIONES
+
+Una expresión combina valores, variables y operadores para producir
+un resultado.
+`,
+    ejemplo: "Si nota = 9, la expresión nota >= 7 devuelve verdadero.",
+    video: "https://www.youtube.com/results?search_query=operadores+aritmeticos+logicos+relacionales+programacion",
+    actividad: {
+      pregunta: "¿Qué operador se utiliza para comprobar si dos condiciones son verdaderas?",
+      opciones: [
+        "OR",
+        "AND",
+        "NOT",
+        "%"
+      ],
+      respuesta: 1,
+      explicacion: "AND requiere que ambas condiciones sean verdaderas."
+    }
+  },
+
+  "Condicionales y estructuras repetitivas": {
+    objetivo: "Implementar decisiones y ciclos para controlar el flujo de ejecución de un programa.",
+    explicacion: `
+Las estructuras de control determinan cómo se ejecutan las
+instrucciones de un programa.
+
+CONDICIONALES
+
+Permiten ejecutar diferentes instrucciones según una condición.
+
+Ejemplo en pseudocódigo:
+
+Si promedio >= 7 Entonces
+  Escribir "Aprobado"
+SiNo
+  Escribir "No aprobado"
+FinSi
+
+ESTRUCTURAS REPETITIVAS
+
+Permiten ejecutar instrucciones varias veces.
+
+Mientras:
+Repite instrucciones mientras una condición sea verdadera.
+
+Para:
+Repite instrucciones una cantidad determinada de veces.
+
+Repetir:
+Ejecuta instrucciones y después comprueba una condición.
+
+EJEMPLO
+
+Para contador desde 1 hasta 5:
+  Escribir contador
+FinPara
+
+El programa muestra los números del 1 al 5.
+
+APLICACIÓN
+
+Se utilizan para validar formularios, recorrer listas y automatizar
+procesos repetitivos.
+`,
+    ejemplo: "Un sistema puede utilizar una condición para verificar si un usuario cumple la edad requerida.",
+    video: "https://www.youtube.com/results?search_query=condicionales+y+ciclos+programacion",
+    actividad: {
+      pregunta: "¿Qué estructura permite repetir instrucciones mientras una condición sea verdadera?",
+      opciones: [
+        "Mientras",
+        "Secuencia",
+        "Asignación",
+        "Declaración"
+      ],
+      respuesta: 0,
+      explicacion: "La estructura Mientras repite instrucciones mientras se cumpla la condición establecida."
+    }
+  },
+
+  "Funciones, procedimientos y modularidad": {
+    objetivo: "Diseñar programas organizados mediante funciones, procedimientos y módulos reutilizables.",
+    explicacion: `
+La modularidad consiste en dividir un programa en componentes
+más pequeños que realizan tareas específicas.
+
+FUNCIONES
+
+Son bloques de código que pueden recibir datos y devolver un resultado.
+
+Ejemplo:
+
+Funcion sumar(a, b)
+  Retornar a + b
+FinFuncion
+
+PROCEDIMIENTOS
+
+Son bloques de instrucciones que realizan una tarea y no necesariamente
+devuelven un valor.
+
+REUTILIZACIÓN
+
+Permite utilizar una función en diferentes partes del programa
+sin escribir nuevamente todas sus instrucciones.
+
+VENTAJAS
+
+- Organización del código.
+- Menor repetición.
+- Facilidad de mantenimiento.
+- Pruebas independientes.
+- Mejor comprensión del programa.
+
+APLICACIÓN
+
+En un sistema educativo pueden existir funciones para calcular
+promedios, registrar estudiantes y generar reportes.
+`,
+    ejemplo: "Una función calcularPromedio puede utilizarse en diferentes pantallas de una plataforma educativa.",
+    video: "https://www.youtube.com/results?search_query=funciones+procedimientos+modularidad+programacion",
+    actividad: {
+      pregunta: "¿Cuál es una ventaja principal de utilizar funciones?",
+      opciones: [
+        "Aumentar la repetición del código",
+        "Evitar organizar el programa",
+        "Reutilizar instrucciones y organizar tareas",
+        "Eliminar todas las variables"
+      ],
+      respuesta: 2,
+      explicacion: "Las funciones permiten reutilizar código y organizar el programa en tareas específicas."
     }
   }
 }
