@@ -1,566 +1,668 @@
 
 export const lecciones = {
-  // MÓDULO 1: DISEÑO ALGORÍTMICO Y RESOLUCIÓN COMPUTACIONAL
+  // MODULO 1: DISENO ALGORITMICO Y RESOLUCION COMPUTACIONAL
 
   "Análisis y descomposición de problemas complejos": {
     objetivo: "Analizar problemas complejos, identificar sus componentes y diseñar soluciones mediante el pensamiento computacional.",
     explicacion: `
-El análisis y la descomposición de problemas son etapas fundamentales
-del desarrollo de software. Antes de escribir código, un programador
-debe comprender qué problema necesita resolver.
+Antes de desarrollar un programa es necesario comprender el problema
+que se desea resolver. El análisis permite identificar qué sucede,
+qué se necesita conseguir y cuáles son las condiciones que deben
+cumplirse.
 
-Un problema complejo puede contener varias dificultades relacionadas.
-Por eso, se divide en partes más pequeñas que sean fáciles de estudiar,
-comprender y solucionar.
+La descomposición consiste en dividir un problema complejo en partes
+más pequeñas y manejables. Cada parte puede estudiarse y resolverse
+por separado.
 
-CONCEPTOS FUNDAMENTALES
+En el pensamiento computacional también se utilizan:
+- Identificación de patrones.
+- Abstracción de información.
+- Diseño de algoritmos.
+- Evaluación de soluciones.
 
-1. Problema computacional:
-Es una situación que puede resolverse mediante un procedimiento
-definido y ejecutado por una computadora.
-
-2. Descomposición:
-Consiste en dividir un problema grande en tareas pequeñas e
-independientes.
-
-3. Abstracción:
-Permite concentrarse en la información importante y dejar de lado
-los detalles que no afectan la solución.
-
-4. Identificación de datos:
-Consiste en reconocer los datos de entrada, los procesos y los
-resultados esperados.
-
-EJEMPLO DESARROLLADO
-
-Problema: desarrollar un sistema para calcular las calificaciones
-de los estudiantes.
+Estas técnicas permiten organizar el trabajo y evitar errores
+durante el desarrollo de software.
+`,
+    ejemplo: `
+Problema: crear un sistema para calcular el promedio de un estudiante.
 
 Descomposición:
-- Registrar los nombres de los estudiantes.
-- Ingresar las calificaciones.
-- Calcular el promedio.
-- Determinar si el estudiante aprobó.
-- Mostrar los resultados.
-
-Datos de entrada:
-Calificaciones del estudiante.
-
-Proceso:
-Sumar las calificaciones y dividir el resultado para la cantidad
-de calificaciones.
-
-Salida:
-Promedio final y estado académico.
-
-APLICACIÓN PRÁCTICA
-
-Los sistemas de matrículas, las plataformas educativas y los
-programas de facturación utilizan la descomposición para organizar
-sus procesos y facilitar el desarrollo de soluciones.
+1. Registrar las calificaciones.
+2. Sumar los valores.
+3. Dividir entre la cantidad de calificaciones.
+4. Mostrar el promedio.
+5. Determinar el resultado académico según las reglas establecidas.
 `,
-    ejemplo: "Si un sistema debe registrar estudiantes, calcular notas y generar reportes, cada función puede desarrollarse como una parte independiente del programa.",
     video: "https://www.youtube.com/results?search_query=pensamiento+computacional+descomposicion+de+problemas",
     actividad: {
-      pregunta: "¿Cuál es el propósito principal de la descomposición de problemas?",
+      pregunta: "¿Cuál es la finalidad principal de descomponer un problema?",
       opciones: [
-        "Aumentar la dificultad del programa",
-        "Dividir un problema complejo en partes pequeñas",
-        "Eliminar todos los datos",
-        "Evitar el uso de algoritmos"
+        "Dividirlo en partes más pequeñas para facilitar su solución",
+        "Aumentar innecesariamente la cantidad de código",
+        "Eliminar todos los datos del problema",
+        "Evitar analizar las condiciones"
       ],
-      respuesta: 1,
-      explicacion: "Correcto. La descomposición permite dividir un problema complejo en tareas más pequeñas y manejables."
+      respuesta: 0,
+      explicacion: "La descomposición facilita la comprensión y resolución de problemas complejos."
     }
   },
 
   "Modelación de soluciones mediante abstracción": {
-    objetivo: "Comprender cómo representar problemas reales mediante modelos simplificados.",
+    objetivo: "Aplicar la abstracción para representar los elementos esenciales de un problema.",
     explicacion: `
 La abstracción es una técnica del pensamiento computacional que
-permite representar una situación real utilizando únicamente
-sus características esenciales.
+permite concentrarse en los aspectos importantes de un problema
+y dejar de lado detalles que no influyen en su solución.
 
-En programación, no siempre es necesario representar todos los
-detalles de un objeto o proceso. Se seleccionan los elementos
-que realmente intervienen en la solución.
+En el desarrollo de software, los modelos representan de forma
+simplificada sistemas, procesos o situaciones reales.
 
-CARACTERÍSTICAS
+Para construir un modelo se identifican:
+- Elementos principales.
+- Características relevantes.
+- Relaciones entre los elementos.
+- Reglas que describen su funcionamiento.
 
-- Identifica información relevante.
-- Reduce detalles innecesarios.
-- Facilita la comprensión del problema.
-- Permite crear modelos de sistemas.
-
-EJEMPLO
-
-Para diseñar un sistema de biblioteca se identifican elementos
-como libros, usuarios, préstamos y fechas de devolución.
-
-No es necesario representar el color de cada estante si ese
-dato no interviene en el funcionamiento del sistema.
-
-APLICACIÓN
-
-La abstracción se utiliza en simuladores, sistemas administrativos,
-aplicaciones móviles y programas de gestión.
+La abstracción permite reducir la complejidad y facilita
+la planificación de una solución informática.
 `,
-    ejemplo: "Un sistema de biblioteca puede representar un libro mediante su título, autor, código y disponibilidad.",
-    video: "https://www.youtube.com/results?search_query=abstraccion+en+programacion+explicacion",
+    ejemplo: `
+Para representar un sistema de biblioteca no es necesario
+describir todos los detalles físicos del edificio.
+
+Se pueden modelar los elementos principales:
+Libro: título, autor y código.
+Usuario: nombre e identificación.
+Préstamo: fecha de entrega y devolución.
+
+Con estos datos se puede diseñar la estructura inicial del sistema.
+`,
+    video: "https://www.youtube.com/results?search_query=abstraccion+en+pensamiento+computacional",
     actividad: {
-      pregunta: "¿Qué permite realizar la abstracción?",
+      pregunta: "¿Qué busca la abstracción al modelar un problema?",
       opciones: [
-        "Representar solamente los aspectos importantes",
-        "Agregar información innecesaria",
-        "Eliminar el funcionamiento del sistema",
-        "Duplicar todos los datos"
+        "Incluir absolutamente todos los detalles",
+        "Identificar los elementos esenciales y omitir detalles irrelevantes",
+        "Eliminar la información necesaria",
+        "Reemplazar los algoritmos por imágenes"
       ],
-      respuesta: 0,
-      explicacion: "La abstracción selecciona los elementos relevantes para simplificar la representación de un problema."
+      respuesta: 1,
+      explicacion: "La abstracción se concentra en la información relevante para resolver el problema."
     }
   },
 
   "Diseño de algoritmos y pseudocódigo estructurado": {
-    objetivo: "Diseñar algoritmos mediante instrucciones ordenadas y representarlos utilizando pseudocódigo.",
+    objetivo: "Diseñar algoritmos ordenados y representar sus instrucciones mediante pseudocódigo.",
     explicacion: `
-Un algoritmo es un conjunto ordenado y finito de instrucciones
-que permite resolver un problema.
+Un algoritmo es un conjunto finito y ordenado de instrucciones
+que permite resolver un problema o realizar una tarea.
 
-Un algoritmo debe ser preciso, comprensible y producir un
-resultado después de ejecutar sus instrucciones.
+Un algoritmo debe ser:
+- Preciso: sus instrucciones deben ser claras.
+- Ordenado: debe seguir una secuencia lógica.
+- Finito: debe terminar después de una cantidad limitada de pasos.
+- Efectivo: sus instrucciones deben poder ejecutarse.
 
-ELEMENTOS DE UN ALGORITMO
+El pseudocódigo representa un algoritmo utilizando expresiones
+parecidas al lenguaje cotidiano y a los lenguajes de programación.
 
-Entrada: información que recibe el procedimiento.
-Proceso: operaciones realizadas con los datos.
-Salida: resultado obtenido.
-
-PSEUDOCÓDIGO
-
-Es una forma de describir un algoritmo mediante instrucciones
-parecidas al lenguaje natural y a los lenguajes de programación.
-
-EJEMPLO: CALCULAR UN PROMEDIO
+No depende de una sintaxis específica, por lo que permite planificar
+la solución antes de escribir el código definitivo.
+`,
+    ejemplo: `
+Algoritmo para calcular el área de un rectángulo:
 
 Inicio
-  Leer nota1
-  Leer nota2
-  Leer nota3
-  promedio = (nota1 + nota2 + nota3) / 3
-  Escribir promedio
+  Leer base
+  Leer altura
+  area = base * altura
+  Escribir area
 Fin
 
-ESTRUCTURAS PRINCIPALES
-
-Secuencial: ejecuta instrucciones en orden.
-Condicional: permite tomar decisiones.
-Repetitiva: permite repetir instrucciones.
-
-APLICACIÓN
-
-Los algoritmos se utilizan para automatizar cálculos, organizar
-información y desarrollar programas informáticos.
+El algoritmo recibe dos valores, realiza la multiplicación
+y presenta el resultado.
 `,
-    ejemplo: "Si las notas son 8, 9 y 10, el algoritmo calcula (8 + 9 + 10) / 3 y obtiene 9.",
-    video: "https://www.youtube.com/results?search_query=algoritmos+y+pseudocodigo+desde+cero",
+    video: "https://www.youtube.com/results?search_query=algoritmos+y+pseudocodigo+estructurado",
     actividad: {
-      pregunta: "¿Qué es un algoritmo?",
+      pregunta: "¿Qué característica indica que un algoritmo debe terminar?",
       opciones: [
-        "Un dispositivo electrónico",
-        "Un conjunto ordenado de instrucciones",
-        "Un sistema operativo",
-        "Una base de datos"
+        "Abstracción",
+        "Repetición infinita",
+        "Finitud",
+        "Decoración"
       ],
-      respuesta: 1,
-      explicacion: "Un algoritmo es una secuencia finita y ordenada de pasos para resolver un problema."
+      respuesta: 2,
+      explicacion: "La finitud establece que un algoritmo debe concluir después de un número limitado de pasos."
     }
   },
 
   "Diagramas de flujo y estructuras de control": {
-    objetivo: "Representar procesos mediante diagramas de flujo e identificar sus estructuras de control.",
+    objetivo: "Representar algoritmos mediante diagramas de flujo y reconocer las estructuras de control.",
     explicacion: `
-Un diagrama de flujo es una representación gráfica de un algoritmo.
-Utiliza símbolos conectados mediante flechas para mostrar el orden
-de las operaciones.
+Un diagrama de flujo representa gráficamente los pasos de un algoritmo
+mediante símbolos conectados por flechas.
 
-SÍMBOLOS PRINCIPALES
+Los símbolos más utilizados son:
+- Óvalo: inicio o fin.
+- Rectángulo: proceso o instrucción.
+- Paralelogramo: entrada o salida de datos.
+- Rombo: decisión o condición.
+- Flechas: dirección del proceso.
 
-Óvalo: representa el inicio o el final.
-Rectángulo: representa un proceso.
-Rombo: representa una decisión.
-Paralelogramo: representa la entrada o salida de datos.
-Flechas: indican la dirección del procedimiento.
+Las estructuras de control organizan la ejecución:
+1. Secuencial: instrucciones ejecutadas en orden.
+2. Condicional: permite elegir entre alternativas.
+3. Repetitiva: ejecuta instrucciones varias veces.
 
-ESTRUCTURAS DE CONTROL
-
-Secuencia: ejecuta instrucciones una después de otra.
-
-Selección: permite elegir entre diferentes caminos según una
-condición.
-
-Repetición: ejecuta instrucciones varias veces mientras se
-cumpla una condición.
-
-EJEMPLO
-
-Un sistema verifica si un estudiante aprobó:
-
-1. Recibir el promedio.
-2. Comprobar si el promedio es mayor o igual a 7.
-3. Mostrar "Aprobado" si se cumple la condición.
-4. En caso contrario, mostrar "En proceso de recuperación".
-
-APLICACIÓN
-
-Los diagramas ayudan a planificar programas antes de escribir
-el código y facilitan la comunicación entre desarrolladores.
+Estas estructuras son fundamentales para construir algoritmos
+capaces de responder a diferentes situaciones.
 `,
-    ejemplo: "Un rombo puede representar la decisión: ¿el promedio es mayor o igual a 7?",
+    ejemplo: `
+Ejemplo de una condición:
+
+Inicio
+  Leer edad
+  Si edad >= 18 Entonces
+    Escribir "Mayor de edad"
+  SiNo
+    Escribir "Menor de edad"
+  FinSi
+Fin
+
+El programa selecciona un resultado según el valor ingresado.
+`,
     video: "https://www.youtube.com/results?search_query=diagramas+de+flujo+estructuras+de+control",
     actividad: {
       pregunta: "¿Qué símbolo representa una decisión en un diagrama de flujo?",
       opciones: [
         "Óvalo",
-        "Rectángulo",
         "Rombo",
+        "Rectángulo",
         "Flecha"
       ],
-      respuesta: 2,
-      explicacion: "El rombo representa una condición que permite seleccionar entre diferentes caminos."
+      respuesta: 1,
+      explicacion: "El rombo representa una condición que permite elegir entre diferentes caminos."
     }
   },
 
   "Validación, eficiencia y trazabilidad algorítmica": {
-    objetivo: "Evaluar algoritmos mediante pruebas, validación de resultados y análisis de eficiencia.",
+    objetivo: "Evaluar algoritmos mediante pruebas, análisis de eficiencia y seguimiento de instrucciones.",
     explicacion: `
-La validación algorítmica permite comprobar que un procedimiento
-funcione correctamente y produzca resultados esperados.
+La validación permite comprobar que un algoritmo produce resultados
+correctos para diferentes datos de entrada.
 
-VALIDACIÓN
+Las pruebas ayudan a encontrar errores y verificar el funcionamiento.
+Se pueden utilizar datos normales, límites y situaciones especiales.
 
-Consiste en verificar que las instrucciones respondan al problema
-planteado.
+La eficiencia analiza los recursos que necesita una solución,
+como el tiempo de ejecución y la memoria.
 
-PRUEBAS
+La trazabilidad permite seguir paso a paso la ejecución de un algoritmo,
+registrando cómo cambian sus variables y resultados.
 
-Se utilizan diferentes datos para comprobar el funcionamiento
-del algoritmo.
-
-Por ejemplo:
-- Datos normales.
-- Valores límite.
-- Datos incorrectos.
-- Casos especiales.
-
-EFICIENCIA
-
-Analiza los recursos que utiliza un algoritmo, especialmente
-el tiempo de ejecución y la memoria.
-
-TRAZABILIDAD
-
-Permite seguir el recorrido de los datos y las operaciones
-durante la ejecución de un algoritmo.
-
-EJEMPLO
-
-Un programa calcula el promedio de tres notas. Para comprobarlo,
-se prueban diferentes combinaciones y se revisa que los resultados
-sean correctos.
-
-APLICACIÓN
-
-Estas técnicas ayudan a detectar errores, mejorar programas
-y mantener sistemas informáticos confiables.
+Estas prácticas mejoran la calidad y confiabilidad del software.
 `,
-    ejemplo: "Si un programa calcula el promedio de 6, 8 y 10, debe devolver 8. Esta prueba permite verificar su resultado.",
-    video: "https://www.youtube.com/results?search_query=pruebas+validacion+algoritmos+programacion",
+    ejemplo: `
+Si un algoritmo calcula el promedio de tres calificaciones,
+se pueden realizar pruebas con:
+
+Prueba 1: 8, 9, 10. Resultado esperado: 9.
+Prueba 2: 5, 5, 5. Resultado esperado: 5.
+Prueba 3: 0, 0, 0. Resultado esperado: 0.
+
+Comparar los resultados permite verificar el algoritmo.
+`,
+    video: "https://www.youtube.com/results?search_query=validacion+pruebas+y+eficiencia+de+algoritmos",
     actividad: {
-      pregunta: "¿Para qué sirve la validación de un algoritmo?",
+      pregunta: "¿Para qué sirve la trazabilidad de un algoritmo?",
       opciones: [
-        "Para comprobar que funciona correctamente",
-        "Para cambiar el nombre del programa",
-        "Para eliminar las instrucciones",
-        "Para aumentar los errores"
+        "Para cambiar el lenguaje de programación",
+        "Para seguir y registrar los pasos de ejecución",
+        "Para eliminar las variables",
+        "Para impedir que el programa termine"
       ],
-      respuesta: 0,
-      explicacion: "La validación permite comprobar que el algoritmo resuelva correctamente el problema."
+      respuesta: 1,
+      explicacion: "La trazabilidad permite observar cómo se ejecutan las instrucciones y cómo cambian los datos."
     }
   },
 
-  // MÓDULO 2: PROGRAMACIÓN ESTRUCTURADA Y LENGUAJES DE PROGRAMACIÓN
+  // MODULO 2: PROGRAMACION ESTRUCTURADA Y LENGUAJES DE PROGRAMACION
 
   "Fundamentos de programación estructurada": {
-    objetivo: "Comprender los principios de la programación estructurada y organizar programas mediante instrucciones claras y ordenadas.",
+    objetivo: "Comprender los principios de la programación estructurada y su aplicación en el desarrollo de programas.",
     explicacion: `
-La programación estructurada es un paradigma que permite desarrollar
-programas mediante estructuras lógicas organizadas.
+La programación estructurada es un enfoque que organiza un programa
+mediante estructuras lógicas y bloques de instrucciones.
 
 Su propósito es facilitar la comprensión, modificación y mantenimiento
 del código.
 
-PRINCIPIOS FUNDAMENTALES
+Se basa principalmente en tres estructuras:
+- Secuencia: ejecuta instrucciones en orden.
+- Selección: toma decisiones mediante condiciones.
+- Iteración: repite instrucciones mientras se cumpla una condición.
 
-1. Secuencia: las instrucciones se ejecutan en orden.
-2. Selección: permite tomar decisiones mediante condiciones.
-3. Iteración: permite repetir instrucciones.
-
-VENTAJAS
-
-- Código más organizado.
-- Menor repetición innecesaria.
-- Facilidad para encontrar errores.
-- Mayor facilidad de mantenimiento.
-
-EJEMPLO
-
-Un programa que calcula el promedio de un estudiante puede organizarse
-en tres partes: entrada de notas, cálculo del promedio y presentación
-del resultado.
-
-APLICACIÓN
-
-Se utiliza en sistemas administrativos, programas educativos y
-aplicaciones de gestión.
+También promueve el uso de bloques organizados y evita estructuras
+de control innecesariamente complejas.
 `,
-    ejemplo: "Un programa estructurado separa la lectura de datos, los cálculos y la presentación de resultados.",
-    video: "https://www.youtube.com/results?search_query=programacion+estructurada+explicacion",
+    ejemplo: `
+Ejemplo:
+
+numero = 10
+
+Si numero > 0 Entonces
+  Escribir "El número es positivo"
+FinSi
+
+La condición determina si se muestra el mensaje.
+`,
+    video: "https://www.youtube.com/results?search_query=fundamentos+programacion+estructurada",
     actividad: {
       pregunta: "¿Cuáles son las tres estructuras fundamentales de la programación estructurada?",
       opciones: [
-        "Texto, imagen y sonido",
         "Secuencia, selección e iteración",
-        "Entrada, teclado y pantalla",
-        "Variables, archivos y carpetas"
+        "Texto, imagen y sonido",
+        "Entrada, pantalla y teclado",
+        "Clase, objeto y herencia"
       ],
-      respuesta: 1,
-      explicacion: "La secuencia, la selección y la iteración permiten organizar el flujo de un programa."
+      respuesta: 0,
+      explicacion: "La programación estructurada se apoya en secuencias, decisiones y repeticiones."
     }
   },
 
   "Variables, constantes y tipos de datos": {
-    objetivo: "Identificar y utilizar variables, constantes y tipos de datos en programas informáticos.",
+    objetivo: "Diferenciar variables, constantes y tipos de datos utilizados en programación.",
     explicacion: `
-Las variables y constantes permiten almacenar información durante
-la ejecución de un programa.
+Una variable es un espacio identificado por un nombre que almacena
+un dato cuyo valor puede cambiar durante la ejecución.
 
-VARIABLES
+Una constante representa un valor que no debe modificarse
+durante el funcionamiento previsto del programa.
 
-Son espacios de memoria identificados mediante nombres cuyo valor
-puede cambiar durante la ejecución.
+Los tipos de datos indican qué clase de información se almacena.
 
-Ejemplo:
-edad = 16
-edad = 17
+Tipos frecuentes:
+- Entero: números sin parte decimal.
+- Decimal: números con parte fraccionaria.
+- Cadena: texto.
+- Booleano: verdadero o falso.
 
-CONSTANTES
+Elegir correctamente los tipos de datos ayuda a evitar errores
+y permite realizar operaciones adecuadas.
+`,
+    ejemplo: `
+Ejemplo en Python:
 
-Representan valores que no deben modificarse durante la ejecución
-del programa.
-
-Ejemplo:
-PI = 3.1416
-
-TIPOS DE DATOS
-
-Entero: almacena números sin decimales.
-Real: almacena números con decimales.
-Cadena: almacena texto.
-Booleano: representa verdadero o falso.
-
-EJEMPLO
-
-nombre = "Ana"
+nombre = "Lucía"
 edad = 17
 promedio = 9.25
-aprobado = verdadero
+aprobado = True
 
-IMPORTANCIA
-
-Elegir correctamente los tipos de datos ayuda a realizar operaciones
-adecuadas y evitar errores.
+nombre almacena texto.
+edad almacena un entero.
+promedio almacena un número decimal.
+aprobado almacena un valor booleano.
 `,
-    ejemplo: "La variable promedio puede almacenar 8.75, mientras que una variable nombre puede almacenar el texto 'Carlos'.",
     video: "https://www.youtube.com/results?search_query=variables+constantes+tipos+de+datos+programacion",
     actividad: {
-      pregunta: "¿Qué tipo de dato representa verdadero o falso?",
+      pregunta: "¿Qué tipo de dato representa el valor True?",
       opciones: [
         "Cadena",
-        "Entero",
+        "Decimal",
         "Booleano",
-        "Real"
+        "Entero"
       ],
       respuesta: 2,
-      explicacion: "El tipo booleano representa dos estados lógicos: verdadero y falso."
+      explicacion: "True es un valor booleano que representa una condición verdadera."
     }
   },
 
   "Operadores y expresiones en programación": {
-    objetivo: "Aplicar operadores aritméticos, relacionales y lógicos en la construcción de expresiones.",
+    objetivo: "Utilizar operadores aritméticos, relacionales y lógicos para construir expresiones.",
     explicacion: `
-Los operadores son símbolos que permiten realizar operaciones
-sobre datos y variables.
+Los operadores permiten realizar cálculos, comparar valores
+y combinar condiciones dentro de un programa.
 
-OPERADORES ARITMÉTICOS
+Operadores aritméticos:
++ suma, - resta, * multiplicación, / división y % módulo.
 
-Suma (+)
-Resta (-)
-Multiplicación (*)
-División (/)
-Módulo (%)
+Operadores relacionales:
+== igual, != diferente, > mayor, < menor, >= mayor o igual
+y <= menor o igual.
 
-OPERADORES RELACIONALES
+Operadores lógicos:
+and, or y not.
 
-Mayor que (>)
-Menor que (<)
-Igual que (==)
-Diferente (!=)
-Mayor o igual (>=)
-Menor o igual (<=)
-
-OPERADORES LÓGICOS
-
-AND: verdadero cuando ambas condiciones son verdaderas.
-OR: verdadero cuando al menos una condición es verdadera.
-NOT: invierte el valor lógico.
-
-EJEMPLO
-
-edad = 17
-edad >= 18
-
-El resultado de la expresión es falso.
-
-EXPRESIONES
-
-Una expresión combina valores, variables y operadores para producir
-un resultado.
+Una expresión combina valores, variables y operadores
+para producir un resultado.
 `,
-    ejemplo: "Si nota = 9, la expresión nota >= 7 devuelve verdadero.",
-    video: "https://www.youtube.com/results?search_query=operadores+aritmeticos+logicos+relacionales+programacion",
+    ejemplo: `
+Ejemplo en Python:
+
+precio = 20
+cantidad = 3
+total = precio * cantidad
+
+es_mayor = total > 50
+
+El total será 60 y la expresión es_mayor será True.
+`,
+    video: "https://www.youtube.com/results?search_query=operadores+aritmeticos+relacionales+logicos+programacion",
     actividad: {
-      pregunta: "¿Qué operador se utiliza para comprobar si dos condiciones son verdaderas?",
+      pregunta: "¿Qué resultado produce la expresión 10 > 5?",
       opciones: [
-        "OR",
-        "AND",
-        "NOT",
-        "%"
+        "False",
+        "True",
+        "15",
+        "Error"
       ],
       respuesta: 1,
-      explicacion: "AND requiere que ambas condiciones sean verdaderas."
+      explicacion: "La comparación es verdadera porque 10 es mayor que 5."
     }
   },
 
   "Condicionales y estructuras repetitivas": {
-    objetivo: "Implementar decisiones y ciclos para controlar el flujo de ejecución de un programa.",
+    objetivo: "Aplicar decisiones y ciclos para controlar el comportamiento de un programa.",
     explicacion: `
-Las estructuras de control determinan cómo se ejecutan las
-instrucciones de un programa.
+Las estructuras condicionales permiten ejecutar instrucciones
+dependiendo de si una condición se cumple.
 
-CONDICIONALES
+Entre las formas habituales se encuentran:
+- if: ejecuta instrucciones cuando una condición es verdadera.
+- if-else: permite elegir entre dos alternativas.
+- if-elif-else: permite evaluar varias posibilidades.
 
-Permiten ejecutar diferentes instrucciones según una condición.
+Las estructuras repetitivas o ciclos ejecutan un bloque de instrucciones
+más de una vez.
 
-Ejemplo en pseudocódigo:
+Los ciclos comunes son:
+- for: repite instrucciones recorriendo una secuencia.
+- while: repite mientras una condición sea verdadera.
 
-Si promedio >= 7 Entonces
-  Escribir "Aprobado"
-SiNo
-  Escribir "No aprobado"
-FinSi
-
-ESTRUCTURAS REPETITIVAS
-
-Permiten ejecutar instrucciones varias veces.
-
-Mientras:
-Repite instrucciones mientras una condición sea verdadera.
-
-Para:
-Repite instrucciones una cantidad determinada de veces.
-
-Repetir:
-Ejecuta instrucciones y después comprueba una condición.
-
-EJEMPLO
-
-Para contador desde 1 hasta 5:
-  Escribir contador
-FinPara
-
-El programa muestra los números del 1 al 5.
-
-APLICACIÓN
-
-Se utilizan para validar formularios, recorrer listas y automatizar
-procesos repetitivos.
+Es importante establecer condiciones de terminación para evitar
+repeticiones que no finalicen.
 `,
-    ejemplo: "Un sistema puede utilizar una condición para verificar si un usuario cumple la edad requerida.",
-    video: "https://www.youtube.com/results?search_query=condicionales+y+ciclos+programacion",
+    ejemplo: `
+Ejemplo en Python:
+
+for numero in range(1, 4):
+    print(numero)
+
+El ciclo muestra los números 1, 2 y 3.
+`,
+    video: "https://www.youtube.com/results?search_query=condicionales+y+bucles+python",
     actividad: {
       pregunta: "¿Qué estructura permite repetir instrucciones mientras una condición sea verdadera?",
       opciones: [
-        "Mientras",
-        "Secuencia",
-        "Asignación",
-        "Declaración"
+        "if",
+        "while",
+        "print",
+        "input"
       ],
-      respuesta: 0,
-      explicacion: "La estructura Mientras repite instrucciones mientras se cumpla la condición establecida."
+      respuesta: 1,
+      explicacion: "while repite un bloque de instrucciones mientras su condición se mantenga verdadera."
     }
   },
 
   "Funciones, procedimientos y modularidad": {
-    objetivo: "Diseñar programas organizados mediante funciones, procedimientos y módulos reutilizables.",
+    objetivo: "Crear funciones y organizar programas mediante módulos reutilizables.",
     explicacion: `
-La modularidad consiste en dividir un programa en componentes
-más pequeños que realizan tareas específicas.
+Una función es un bloque de código diseñado para realizar una tarea.
+Puede recibir datos mediante parámetros y devolver un resultado.
 
-FUNCIONES
+Los procedimientos realizan acciones organizadas y, según el lenguaje,
+pueden no devolver un valor explícito.
 
-Son bloques de código que pueden recibir datos y devolver un resultado.
+La modularidad consiste en dividir un programa en partes independientes
+que colaboran para resolver un problema.
 
-Ejemplo:
-
-Funcion sumar(a, b)
-  Retornar a + b
-FinFuncion
-
-PROCEDIMIENTOS
-
-Son bloques de instrucciones que realizan una tarea y no necesariamente
-devuelven un valor.
-
-REUTILIZACIÓN
-
-Permite utilizar una función en diferentes partes del programa
-sin escribir nuevamente todas sus instrucciones.
-
-VENTAJAS
-
-- Organización del código.
-- Menor repetición.
+Sus ventajas incluyen:
+- Reutilización de código.
+- Mejor organización.
 - Facilidad de mantenimiento.
-- Pruebas independientes.
-- Mejor comprensión del programa.
-
-APLICACIÓN
-
-En un sistema educativo pueden existir funciones para calcular
-promedios, registrar estudiantes y generar reportes.
+- Pruebas más sencillas.
+- Reducción de repeticiones innecesarias.
 `,
-    ejemplo: "Una función calcularPromedio puede utilizarse en diferentes pantallas de una plataforma educativa.",
-    video: "https://www.youtube.com/results?search_query=funciones+procedimientos+modularidad+programacion",
+    ejemplo: `
+Ejemplo en Python:
+
+def calcular_area(base, altura):
+    return base * altura
+
+resultado = calcular_area(5, 3)
+print(resultado)
+
+La función recibe dos parámetros y devuelve el área.
+`,
+    video: "https://www.youtube.com/results?search_query=funciones+procedimientos+modularidad+python",
     actividad: {
-      pregunta: "¿Cuál es una ventaja principal de utilizar funciones?",
+      pregunta: "¿Cuál es una ventaja de utilizar funciones?",
       opciones: [
-        "Aumentar la repetición del código",
-        "Evitar organizar el programa",
-        "Reutilizar instrucciones y organizar tareas",
-        "Eliminar todas las variables"
+        "Repetir todo el código manualmente",
+        "Organizar y reutilizar instrucciones",
+        "Eliminar todos los parámetros",
+        "Impedir la ejecución del programa"
+      ],
+      respuesta: 1,
+      explicacion: "Las funciones permiten reutilizar código y organizar mejor las tareas de un programa."
+    }
+  },
+
+  // MODULO 3: PROGRAMACION ORIENTADA A OBJETOS
+
+  "Fundamentos de la programación orientada a objetos": {
+    objetivo: "Comprender los principios de la programación orientada a objetos y reconocer su utilidad en el desarrollo de software.",
+    explicacion: `
+La programación orientada a objetos (POO) es un paradigma que organiza
+el código mediante entidades llamadas objetos. Cada objeto reúne datos
+y comportamientos relacionados.
+
+Sus conceptos principales son:
+- Clase: plantilla que define características y comportamientos.
+- Objeto: instancia creada a partir de una clase.
+- Atributos: datos que describen al objeto.
+- Métodos: acciones que puede realizar el objeto.
+
+La POO se utiliza en aplicaciones empresariales, videojuegos,
+sistemas educativos y plataformas web.
+
+Este paradigma facilita la reutilización, organización y mantenimiento
+del software.
+`,
+    ejemplo: `
+En un sistema escolar se puede crear una clase Estudiante.
+
+Sus atributos pueden ser nombre, edad y curso.
+Sus métodos pueden ser mostrarDatos() y calcularPromedio().
+
+Cada estudiante creado será un objeto con sus propios datos.
+`,
+    video: "https://www.youtube.com/results?search_query=fundamentos+programacion+orientada+a+objetos",
+    actividad: {
+      pregunta: "¿Cuál es el propósito principal de la programación orientada a objetos?",
+      opciones: [
+        "Organizar el programa mediante objetos que reúnen datos y comportamientos",
+        "Eliminar todas las variables",
+        "Evitar el uso de métodos",
+        "Convertir automáticamente programas en páginas web"
+      ],
+      respuesta: 0,
+      explicacion: "La POO organiza el software en objetos que contienen atributos y métodos."
+    }
+  },
+
+  "Clases, objetos y atributos": {
+    objetivo: "Diferenciar clases y objetos e identificar los atributos que describen sus características.",
+    explicacion: `
+Una clase funciona como una plantilla para crear objetos.
+Define qué información y comportamientos tendrán sus instancias.
+
+Un objeto es una instancia concreta de una clase. Cada objeto puede
+tener valores propios para sus atributos.
+
+Los atributos son variables que almacenan características
+de un objeto, por ejemplo nombre, precio, color o estado.
+
+Comprender esta diferencia permite representar entidades reales
+dentro de un programa.
+`,
+    ejemplo: `
+Ejemplo en Python:
+
+class Estudiante:
+    def __init__(self, nombre, curso):
+        self.nombre = nombre
+        self.curso = curso
+
+alumno = Estudiante("Ana", "Tercero")
+
+La clase es Estudiante.
+El objeto es alumno.
+Sus atributos son nombre y curso.
+`,
+    video: "https://www.youtube.com/results?search_query=clases+objetos+atributos+python",
+    actividad: {
+      pregunta: "En una clase Automóvil, ¿cuál de las siguientes opciones representa un atributo?",
+      opciones: [
+        "acelerar()",
+        "frenar()",
+        "color",
+        "encenderMotor()"
       ],
       respuesta: 2,
-      explicacion: "Las funciones permiten reutilizar código y organizar el programa en tareas específicas."
+      explicacion: "El color es una característica del automóvil, por eso es un atributo."
+    }
+  },
+
+  "Métodos, constructores y encapsulamiento": {
+    objetivo: "Identificar la función de los métodos y constructores y comprender la importancia del encapsulamiento.",
+    explicacion: `
+Los métodos son funciones definidas dentro de una clase que describen
+las acciones que pueden realizar sus objetos.
+
+El constructor es un método especial que se ejecuta al crear un objeto.
+En Python se utiliza __init__ para inicializar sus atributos.
+
+El encapsulamiento consiste en proteger y controlar el acceso
+a los datos de un objeto. Ayuda a evitar modificaciones incorrectas
+y permite establecer reglas para trabajar con la información.
+
+Estos elementos contribuyen a desarrollar programas organizados
+y fáciles de mantener.
+`,
+    ejemplo: `
+Ejemplo en Python:
+
+class Cuenta:
+    def __init__(self, titular):
+        self.titular = titular
+        self.saldo = 0
+
+    def consultar_saldo(self):
+        return self.saldo
+
+El constructor inicializa los datos y consultar_saldo()
+es un método que permite consultar el saldo.
+`,
+    video: "https://www.youtube.com/results?search_query=metodos+constructores+encapsulamiento+programacion",
+    actividad: {
+      pregunta: "¿Qué función cumple un constructor?",
+      opciones: [
+        "Eliminar todos los objetos",
+        "Inicializar un objeto cuando se crea",
+        "Cerrar automáticamente el programa",
+        "Convertir atributos en archivos"
+      ],
+      respuesta: 1,
+      explicacion: "El constructor prepara el objeto e inicializa sus atributos al momento de crearlo."
+    }
+  },
+
+  "Herencia y polimorfismo": {
+    objetivo: "Comprender cómo la herencia permite reutilizar características y cómo el polimorfismo facilita diferentes comportamientos.",
+    explicacion: `
+La herencia permite crear una clase nueva a partir de otra existente.
+La clase hija puede reutilizar atributos y métodos de la clase padre
+e incorporar características propias.
+
+El polimorfismo permite que objetos de diferentes clases respondan
+a una misma operación de distintas maneras.
+
+Por ejemplo, diferentes figuras geométricas pueden tener un método
+calcular_area(), pero cada figura realiza el cálculo de acuerdo
+con su propia forma.
+
+Estos principios favorecen la reutilización y flexibilidad del código.
+`,
+    ejemplo: `
+Ejemplo conceptual:
+
+Clase Animal:
+    método hacer_sonido()
+
+Clase Perro:
+    hereda de Animal
+    hacer_sonido() devuelve "Guau"
+
+Clase Gato:
+    hereda de Animal
+    hacer_sonido() devuelve "Miau"
+
+Ambas clases comparten una estructura, pero implementan
+el comportamiento de manera diferente.
+`,
+    video: "https://www.youtube.com/results?search_query=herencia+y+polimorfismo+programacion+orientada+a+objetos",
+    actividad: {
+      pregunta: "¿Qué permite principalmente la herencia?",
+      opciones: [
+        "Reutilizar características y métodos de otra clase",
+        "Eliminar la estructura de las clases",
+        "Impedir la creación de objetos",
+        "Transformar métodos en imágenes"
+      ],
+      respuesta: 0,
+      explicacion: "La herencia permite aprovechar características de una clase existente y extenderlas."
+    }
+  },
+
+  "Relaciones entre clases y diseño de aplicaciones": {
+    objetivo: "Reconocer las relaciones entre clases y aplicarlas en el diseño de soluciones de software.",
+    explicacion: `
+En una aplicación, las clases pueden relacionarse para representar
+cómo interactúan las distintas partes de un sistema.
+
+Entre las relaciones más comunes se encuentran:
+
+- Asociación: una clase se relaciona con otra.
+- Agregación: un objeto contiene o agrupa otros objetos que pueden
+  existir independientemente.
+- Composición: un objeto está formado por otros elementos cuya
+  existencia depende de él.
+
+Por ejemplo, en una plataforma educativa pueden existir las clases
+Estudiante, Materia, Docente y Evaluación.
+
+Diseñar correctamente estas relaciones ayuda a organizar
+la arquitectura de una aplicación y facilita su mantenimiento.
+`,
+    ejemplo: `
+Una clase Estudiante puede relacionarse con una clase Materia
+porque un estudiante puede matricularse en varias materias.
+
+Una clase Materia también puede relacionarse con una clase Docente
+que imparte esa asignatura.
+`,
+    video: "https://www.youtube.com/results?search_query=relaciones+entre+clases+asociacion+agregacion+composicion",
+    actividad: {
+      pregunta: "¿Qué representa una asociación entre clases?",
+      opciones: [
+        "Una relación entre clases que interactúan",
+        "La eliminación de una clase",
+        "Un error de sintaxis",
+        "La conversión de un programa en una imagen"
+      ],
+      respuesta: 0,
+      explicacion: "La asociación representa una relación o interacción entre clases dentro de un sistema."
     }
   }
 }
